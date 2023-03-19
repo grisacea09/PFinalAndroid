@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:name="androidx.navigation.fragment.NavHostFragment"
+    app:navGraph = "@navigation/nav_graph"
+    android:id="@+id/layout_compra"
+
+    tools:context=".vistas.fragments.compraFragment">
+
+    <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/divisas"
+        android:clickable="true"
+        android:scrollbars="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/lay_bpound"
+                android:layout_width="130dp"
+                android:layout_height="190dp"
+                android:orientation="vertical"
+
+                >
+
+                <TextView
+                    android:id="@+id/spound"
+                    android:layout_width="130dp"
+                    android:layout_height="40dp"
+                    android:textColor="#3F51B5"
+                    android:gravity="center"
+                    android:text="GBP">
+                </TextView>
+
+                <ImageView
+                android:id="@+id/imgBpound"
+                android:layout_width="130dp"
+                android:layout_height="100dp"
+                android:padding="10dp"
+
+                android:src="@drawable/british_pound" />
+
+                <TextView
+                    android:id="@+id/bpound"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:textColor="#3F51B5"
+                    android:gravity="center"
+                android:text="Texto modeda">
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/laysbrasil"
+            android:layout_width="130dp"
+            android:layout_height="190dp"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/sbrasil_reep"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:textColor="#3F51B5"
+                android:gravity="center"
+                android:text="GBP">
+            </TextView>
+
+            <ImageView
+                android:id="@+id/imgbrasilreep"
+                android:layout_width="130dp"
+                android:layout_height="100dp"
+                android:padding="10dp"
+                android:src="@drawable/brasil_reep" />
+            <TextView
+                android:id="@+id/tbrasil_reep"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:textColor="#3F51B5"
+                android:gravity="center"
+                android:text="Texto modeda">
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/laycan"
+            android:layout_width="130dp"
+            android:layout_height="190dp"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/scanadian_dollar"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:textColor="#3F51B5"
+                android:gravity="center"
+                android:text="GBP">
+            </TextView>
+
+            <ImageView
+                android:id="@+id/imgcanadian_dollar"
+                android:layout_width="130dp"
+                android:layout_height="100dp"
+                android:padding="10dp"
+                android:src="@drawable/canadian_dollar" />
+
+            <TextView
+                android:id="@+id/tcan_dolar"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:textColor="#3F51B5"
+                android:gravity="center"
+                android:text="Texto modeda">
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layusd"
+            android:layout_width="130dp"
+            android:layout_height="190dp"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/sdolar"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:textColor="#3F51B5"
+                android:gravity="center"
+                android:text="GBP">
+            </TextView>
+            <ImageView
+                android:id="@+id/imgdolar"
+                android:layout_width="130dp"
+                android:layout_height="100dp"
+                android:padding="10dp"
+                android:src="@drawable/dolar" />
+            <TextView
+                android:id="@+id/tdolar"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:textColor="#3F51B5"
+                android:gravity="center"
+                android:text="Texto modeda">
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layegypt"
+            android:layout_width="130dp"
+            android:layout_height="190dp"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/segypt_pound"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:textColor="#3F51B5"
+                android:gravity="center"
+                android:text="GBP">
+            </TextView>
+
+            <ImageView
+                android:id="@+id/imgegypt_pound"
+                android:layout_width="130dp"
+                android:layout_height="100dp"
+                android:padding="10dp"
+                android:src="@drawable/egypt_pound" />
+            <TextView
+                android:id="@+id/tegypt_pound"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:textColor="#3F51B5"
+                android:gravity="center"
+
+                android:text="Texto modeda">
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layeuro"
+            android:layout_width="130dp"
+            android:layout_height="190dp"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/seuro"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:textColor="#3F51B5"
+                android:gravity="center"
+                android:text="GBP">
+            </TextView>
+
+            <ImageView
+                android:id="@+id/imgeuro"
+                android:layout_width="130dp"
+                android:layout_height="100dp"
+                android:padding="10dp"
+                android:src="@drawable/euro" />
+            <TextView
+                android:id="@+id/teuro"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:textColor="#3F51B5"
+                android:gravity="center"
+                android:text="Texto modeda">
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layindian"
+            android:layout_width="130dp"
+            android:layout_height="190dp"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/sindian_ruppe"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:textColor="#3F51B5"
+                android:gravity="center"
+                android:text="GBP">
+            </TextView>
+
+            <ImageView
+                android:id="@+id/imgindian_ruppe"
+                android:layout_width="130dp"
+                android:layout_height="100dp"
+                android:padding="10dp"
+                android:src="@drawable/indian_ruppe" />
+            <TextView
+                android:id="@+id/tindian_rupee"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:textColor="#3F51B5"
+                android:gravity="center"
+                android:text="Texto modeda">
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="130dp"
+            android:layout_height="190dp"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/snk_won"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:textColor="#3F51B5"
+                android:gravity="center"
+                android:text="GBP">
+            </TextView>
+
+            <ImageView
+                android:id="@+id/imgnk_won"
+                android:layout_width="130dp"
+                android:layout_height="100dp"
+                android:padding="10dp"
+                android:src="@drawable/nk_won" />
+            <TextView
+                android:id="@+id/tnk_won"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:textColor="#3F51B5"
+                android:gravity="center"
+                android:text="Texto modeda">
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="130dp"
+            android:layout_height="190dp"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/ssk_won"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:textColor="#3F51B5"
+                android:gravity="center"
+                android:text="GBP">
+            </TextView>
+            <ImageView
+                android:id="@+id/imgsk_won"
+                android:layout_width="130dp"
+                android:layout_height="100dp"
+                android:padding="10dp"
+                android:src="@drawable/sk_won" />
+            <TextView
+                android:id="@+id/tsk_won"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:textColor="#3F51B5"
+                android:gravity="center"
+                android:text="Texto modeda">
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="130dp"
+            android:layout_height="190dp"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/speso_colombia"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:textColor="#3F51B5"
+                android:gravity="center"
+                android:text="GBP">
+            </TextView>
+
+
+            <ImageView
+                android:id="@+id/imgpeso_colombia"
+                android:layout_width="130dp"
+                android:layout_height="100dp"
+                android:padding="10dp"
+                android:src="@drawable/peso_colombia" />
+            <TextView
+                android:id="@+id/tpeso_colomb"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:textColor="#3F51B5"
+                android:text="Texto modeda">
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="130dp"
+            android:layout_height="190dp"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/speso_cuba"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:textColor="#3F51B5"
+                android:gravity="center"
+                android:text="GBP">
+            </TextView>
+
+            <ImageView
+                android:id="@+id/imgpeso_cuba"
+                android:layout_width="130dp"
+                android:layout_height="100dp"
+                android:padding="10dp"
+                android:src="@drawable/peso_cuba" />
+            <TextView
+                android:id="@+id/tpeso_cuba"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:textColor="#3F51B5"
+                android:text="Texto modeda">
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="130dp"
+            android:layout_height="190dp"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/skrona"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:textColor="#3F51B5"
+                android:gravity="center"
+                android:text="GBP">
+            </TextView>
+            <ImageView
+                android:id="@+id/imgkrona"
+                android:layout_width="130dp"
+                android:layout_height="100dp"
+                android:padding="10dp"
+                />
+            <TextView
+                android:id="@+id/tkrona"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:textColor="#3F51B5"
+                android:gravity="center"
+                android:text="Texto modeda">
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="130dp"
+            android:layout_height="190dp"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/srusian"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:textColor="#3F51B5"
+                android:gravity="center"
+                android:text="GBP">
+            </TextView>
+
+            <ImageView
+                android:id="@+id/imgrusian"
+                android:layout_width="130dp"
+                android:layout_height="100dp"
+                android:padding="10dp"
+                android:src="@drawable/rusian" />
+            <TextView
+                android:id="@+id/trusian"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:textColor="#3F51B5"
+                android:gravity="center"
+                android:text="Texto modeda">
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="130dp"
+            android:layout_height="190dp"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/syuan"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:textColor="#3F51B5"
+                android:gravity="center"
+                android:text="GBP">
+            </TextView>
+            <ImageView
+                android:id="@+id/imgyuan"
+                android:layout_width="130dp"
+                android:layout_height="100dp"
+                android:padding="10dp"
+                android:src="@drawable/yuan" />
+            <TextView
+                android:id="@+id/tyuan"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:textColor="#3F51B5"
+                android:gravity="center"
+                android:text="Texto modeda">
+            </TextView>
+        </LinearLayout>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="190dp"
+        android:id="@+id/detalleDivisas"
+        android:fillViewport="true"
+        android:layout_below="@id/divisas"
+
+        >
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+
+            <RelativeLayout
+        android:id="@+id/compraContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+
+        <TextView
+            android:id="@+id/monto"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+
+            android:gravity="center"
+            android:text="Monto: $5000 MNX"
+            android:textColor="#3F51B5"></TextView>
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/line_chart"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@id/monto">
+
+        </com.github.mikephil.charting.charts.LineChart>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/line_chart"
+            android:orientation="horizontal"
+            android:id="@+id/tx"
+            android:visibility= "gone"
+            >
+
+            <TextView
+                android:id="@+id/txAyer"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="Ayer"
+                android:textColor="#3F51B5">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/txHoy"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+
+                android:gravity="center"
+                android:text="Hoy"
+                android:textColor="#3F51B5">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/txNext"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="Mañana"
+                android:textColor="#3F51B5">
+
+            </TextView>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ratesKpi"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/kpi"
+            android:visibility= "gone"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/rtkAyer"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="Mañana"
+                android:textColor="#3F51B5"
+
+                >
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/rtkHoy"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="Mañana"
+                android:textColor="#3F51B5"
+                 >
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/rtkNext"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="Mañana"
+                android:textColor="#3F51B5"
+                >
+
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/kpi"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/tx"
+            android:visibility= "gone"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/rtAyer"
+                android:layout_marginRight="45dp"
+                android:layout_marginLeft="45dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                >
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/rtHoy"
+                android:layout_marginRight="45dp"
+                android:layout_marginLeft="45dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                 >
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/rtNext"
+                android:layout_marginRight="45dp"
+                android:layout_marginLeft="45dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+
+                >
+
+            </ImageView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/asignaMonto"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@id/ratesKpi"
+            android:visibility = "gone"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/montousr"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:gravity="center"
+                android:text="Monto:"
+                android:textColor="#3F51B5"
+                >
+            </TextView>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cantidad"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"
+                >
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+            <android.widget.Button
+                android:id="@+id/buttonCompra"
+                style="@style/botonAcept"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="25dp"
+                android:layout_centerInParent="true"
+                android:text="@string/comprar"
+                android:textAllCaps="false"
+                />
+
+        </LinearLayout>
+    </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/babMain"
+        style="@style/BottomAppBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:contentInsetStart="0dp"
+        app:fabCradleMargin="10dp"
+        app:fabCradleRoundedCornerRadius="10dp"
+        app:fabCradleVerticalOffset="10dp"
+        app:hideOnScroll="true"
+        tools:ignore="BottomAppBar">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/nav_view"
+            style="@style/BottomNavigationStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:menu="@menu/bottom_nav_menu" />
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+
+
+</FrameLayout>

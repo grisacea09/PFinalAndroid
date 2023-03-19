@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:scrollbars="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="190dp"
+            android:padding="10dp"
+            android:src="@drawable/british_pound" />
+
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="190dp"
+            android:padding="10dp"
+            android:src="@drawable/brasil_reep" />
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="190dp"
+            android:padding="10dp"
+            android:src="@drawable/canadian_dollar" />
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="190dp"
+            android:padding="10dp"
+            android:src="@drawable/dolar" />
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="190dp"
+            android:padding="10dp"
+            android:src="@drawable/egypt_pound" />
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="190dp"
+            android:padding="10dp"
+            android:src="@drawable/euro" />
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="190dp"
+            android:padding="10dp"
+            android:src="@drawable/indian_ruppe" />
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="190dp"
+            android:padding="10dp"
+            android:src="@drawable/nk_won" />
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="190dp"
+            android:padding="10dp"
+            android:src="@drawable/sk_won" />
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="190dp"
+            android:padding="10dp"
+            android:src="@drawable/peso_colombia" />
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="190dp"
+            android:padding="10dp"
+            android:src="@drawable/peso_cuba" />
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="190dp"
+            android:padding="10dp"
+            android:src="@drawable/pound_sterling" />
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="190dp"
+            android:padding="10dp"
+            android:src="@drawable/rusian" />
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="190dp"
+            android:padding="10dp"
+            android:src="@drawable/yuan" />
+
+    </LinearLayout>
+
+</HorizontalScrollView>

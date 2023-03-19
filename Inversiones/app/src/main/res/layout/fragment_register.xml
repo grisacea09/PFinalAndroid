@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/login"
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context=".fragment.RegisterFragment"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:id="@+id/imageLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:src="@drawable/roundedlogo"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/textWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/welcome"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+             />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/editUserLogin"
+            style="@style/InputLogin"
+            android:layout_marginTop="30dp"
+            android:hint="@string/user"
+            app:hintTextAppearance="@style/TextLabel"
+          >
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/InputTextLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/editPasswordLogin"
+            style="@style/InputLogin"
+            android:layout_marginTop="26dp"
+            android:hint="@string/password"
+            app:hintTextAppearance="@style/TextLabel"
+            android:inputType="textPassword"
+            app:passwordToggleEnabled="true"
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/InputTextLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tvCuenta"
+            style="@style/InputLogin"
+            android:layout_marginTop="30dp"
+            android:hint="@string/cuenta"
+            app:hintTextAppearance="@style/TextLabel"
+            app:counterEnabled="true"
+            app:counterMaxLength="18"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/InputTextLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tvTelefono"
+            style="@style/InputLogin"
+            android:layout_marginTop="30dp"
+            android:hint="@string/cell"
+            app:hintTextAppearance="@style/TextLabel"
+            app:counterEnabled="true"
+            app:counterMaxLength="10"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/InputTextLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <android.widget.Button
+            android:id="@+id/buttonLogin"
+            style="@style/botonAcept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38dp"
+            android:text="@string/enviar"
+            android:textAllCaps="false"
+             />
+
+    </LinearLayout>
+    </ScrollView>
+</FrameLayout>
