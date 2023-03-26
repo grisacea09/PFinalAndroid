@@ -26,8 +26,8 @@ android {
         }
         debug {
             //si funciona mi deploy solo subir como siempre con git
-         //   buildConfigField "String", "BASE_API_URL", '"https://app-inversion.herokuapp.com/"'
-           buildConfigField "String", "BASE_API_URL", '"http://192.168.68.107:8080/"'
+           buildConfigField "String", "BASE_API_URL", '"https://app-inversion.herokuapp.com/"'
+         //  buildConfigField "String", "BASE_API_URL", '"http://192.168.68.107:8080/"'
             buildConfigField "String", "DIVISAS_API_URL", '"https://private-3bd5fca-vestimentas.apiary-mock.com/"'
 
         }
