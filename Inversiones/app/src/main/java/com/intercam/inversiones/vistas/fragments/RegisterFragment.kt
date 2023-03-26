@@ -4,6 +4,7 @@ package com.intercam.inversiones.vistas.fragments
 import android.app.Activity
 import android.app.AlertDialog
 import android.content.Context
+import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -11,25 +12,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
-import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.lifecycleScope
-import androidx.room.Room
-
+import com.intercam.inversiones.R
 
 
 import com.intercam.inversiones.companion.Manager
 import com.intercam.inversiones.companion.Network
-import com.intercam.inversiones.companion.RoomModule
-import com.intercam.inversiones.data.database.InversionesDB
-import com.intercam.inversiones.data.database.entities.EnrolamientoEntity
-import com.intercam.inversiones.data.database.model.EnrolamientoModel
 import com.intercam.inversiones.databinding.FragmentRegisterBinding
 import com.intercam.inversiones.dto.UsuarioBody
 import com.intercam.inversiones.dto.UsuarioResponseBody
 import com.intercam.inversiones.rest.ManagerRest
 import com.intercam.inversiones.vistas.activities.MainActivity
-import kotlinx.coroutines.*
+import com.intercam.inversiones.vistas.activities.MenuActivity
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -95,7 +92,7 @@ class RegisterFragment : Fragment() {
                else if(Network.typeNetwork(requireContext()) == "wifi") {
                if (Network.verifyMetwork(requireContext())) {
 
-                   CoroutineScope(Dispatchers.IO).launch {
+
 
                        val call = Manager.generateService().create(ManagerRest::class.java)
                            .sendInsertaUsuario(
@@ -111,32 +108,35 @@ class RegisterFragment : Fragment() {
 
                                if (response.code() == 200) {
 
-                                   val room = Room.databaseBuilder(
-                                       requireContext(),
-                                       InversionesDB::class.java,
-                                       "inversion_database"
-                                   ).build()
-                                   //b)ya se registró el usuario y que no vuelva a aparecer el boton de registro
-                                   lifecycleScope.launch {
-                                       val rolled = EnrolamientoModel("OK", username)
-                                       room.getRolledDao().insertEnrolamiento(rolled)
-                                       val resp: EnrolamientoModel =
-                                           room.getRolledDao().getEnrolamiento()
-                                       //vamos a hacer la prueba de que ya se tiene insertado
-                                       if (!resp.enrolado.isEmpty()) {
+
                                            Log.i(
                                                TAG,
-                                               "se insertó correctamente en la BD: " + resp.username
+                                               "se insertó correctamente  "
                                            )
                                            //c) último paso ir al login
-                                           val intent =
-                                               Intent(requireContext(), MainActivity::class.java)
-                                           startActivity(intent)
-                                       } else {
-                                           Log.i(TAG, "No se insertó correctamente en la BD")
-                                       }
-                                   }//fin corutina
-                               }
+
+
+
+                                       AlertDialog.Builder(requireContext())
+                                           .setTitle("El usuario ha sido insertado")
+                                           .setMessage("Ir al login")
+                                           .setCancelable(false)
+                                           .setPositiveButton("Aceptar", DialogInterface.OnClickListener{dialog: DialogInterface, which: Int ->
+                                               Log.i("Register","quiero ir al login ")
+                                               val fragmentManager = getActivity()?.getSupportFragmentManager()
+                                               val fragmentTransaction = fragmentManager?.beginTransaction()
+                                               if (fragmentTransaction != null) {
+                                                   fragmentTransaction.remove(this@RegisterFragment).commit()
+                                               }
+
+
+
+                                           })
+                                           .show()
+
+                                   }
+
+
                            }
 
                            override fun onFailure(call: Call<UsuarioResponseBody>, t: Throwable) {
@@ -154,7 +154,7 @@ class RegisterFragment : Fragment() {
                            }
 
                        })
-                   }
+
                }
                    else{
                    AlertDialog.Builder(requireContext())

@@ -103,7 +103,7 @@ class Manager {
                 .addInterceptor ( Interceptor {chain ->
                     val builder = chain.request().newBuilder()
                     builder.header("Accept", "application/json")
-                    builder.header("apikey", "")
+                    builder.header("apikey", "xnbdxk7XVYtqUOm3TnJtSnaUUESc4ayI")
 
                     return@Interceptor chain.proceed(builder.build())
                 })
