@@ -134,18 +134,21 @@ class compraFragment : Fragment() {
                 }
                 else if(Network.typeNetwork(requireContext()) == "wifi") {
 
-                    CoroutineScope(Dispatchers.IO).launch {
+                    CoroutineScope(Dispatchers.Main).launch {
 
                         divisaDestino = "GBP"
-                        var listValues: List<Float> = async { getSerieKpi(divisaDestino) }.await()
+                        var listValues: List<Float> =  async { getSerieKpi(divisaDestino)}.await()
+
                         var listEntradas2: MutableList<Entry> =
                             async { downloadSerie2(divisaDestino) }.await()
 
 
                         withContext(Dispatchers.Main) {
 
-                            delay(6000)
+                            delay(5000)
                             drawFunction(listEntradas2)
+                            delay(9000)
+                            Log.i("lista de valores2",""+listValues)
                             drawTimeSerie(listValues)
 
 
@@ -706,7 +709,7 @@ class compraFragment : Fragment() {
                             async { downloadSerie2(divisaDestino) }.await()
 
                         withContext(Dispatchers.Main) {
-                            delay(6000)
+                            delay(9000)
                             drawTimeSerie(listValues)
                             drawFunction(listEntradas2)
 
@@ -946,7 +949,7 @@ class compraFragment : Fragment() {
         CoroutineScope(Dispatchers.IO).launch {
 
             val call =
-                Manager.generateServiceAPI().create(ManagerRest::class.java).getSerie2("2023-03-01","2023-03-13",divisaBase, rate)
+                Manager.generateServiceAPI().create(ManagerRest::class.java).getSerie2("2023-03-15","2023-03-29",divisaBase, rate)
 
             call.enqueue(object : Callback<Serie> {
                 override fun onResponse(
@@ -1041,8 +1044,13 @@ class compraFragment : Fragment() {
             val hoy = format.format(date)
             Log.i("Hoy", hoy)
             var cad = hoy.split("-")
+
             var y= cad[2].toInt()-1
-            var ayer = cad[0]+"-"+ cad[1]+"-"+y.toString()
+            var cadY=""
+            if(y<10){
+                cadY="0"+y;
+            }
+            var ayer = cad[0]+"-"+ cad[1]+"-"+cadY
             Log.i("Ayer", hoy)
 
             Log.i("Divisas", dDestino+" - "+ divisaBase)
@@ -1150,7 +1158,7 @@ class compraFragment : Fragment() {
 
             binding.rtkAyer.text = "" + listValues.get(0)
             binding.rtkHoy.text = "" + listValues.get(1)
-           // Log.i("drawserie:",""+listValues.await().get(0))
+            Log.i("drawserie:",""+listValues.get(0))
             var promedio: Double =
                 (listValues.get(0).toDouble() + listValues.get(1)
                     .toDouble()) / 2
@@ -1184,6 +1192,9 @@ class compraFragment : Fragment() {
             binding.asignaMonto.visibility = View.VISIBLE
            // Log.i("corutine", "1.-corutina2" )
 
+        }
+        else{
+            Log.i("COMPRA FRAGMENR", "Problema de sincronicidad")
         }
     }
 
